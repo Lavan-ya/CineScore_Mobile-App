@@ -11,8 +11,9 @@ function Login(){
             return;
         }
         try{
+            alert("dsafsds",value)
             const response = await axios.post(`http://localhost:3000/api/v1/login`,{name : value})
-            if(response.status === 201){
+            if(response.status === 200){
                 alert("successful");
                 alert("value is "+JSON.stringify(response.data));
                 setValue("")
